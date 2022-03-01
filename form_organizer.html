@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Host your own event!</title>
+
+    <link rel="shortcut icon" type="image/jpg" href="images/favicon.jpg" />
+
+    <!--Dependencies-->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="css/stylesheet.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link
+        href="import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400;600;800;900&display=swap');" />
+
+    <!--Datepicker-->
+    <script src="js/jquery.simple-dtpicker.js"></script>
+    <link rel="stylesheet" href="css/jquery.simple-dtpicker.css" />
+</head>
+
+<body style="background-image: url('images/form.jpg');">
+
+    <!-- NAV BAR -->
+    <nav class="navbar navbar-expand-lg navbar-bg" ;>
+        <a class="navbar-brand haven" href="index.html"><img src="images/logo.png" height=60px></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon hamburger-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link word" href="index.html">Home<span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle word" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Events
+                    </a>
+                    <div class="dropdown-menu word" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="discover.html">Participant</a>
+                        <a class="dropdown-item" href="form_organizer.html">Organizer</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link word" href="index.html#our-goals">Our Goals</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link  word" href="index.html#about-us">About Us</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <!-- end of NAV BAR -->
+
+    <!--FORM-->
+    <div class="main-container my-5" style="width:80%;">
+        <div class="form-container">
+            <form id="form" class="form p-5" action="" method="post" name="Event Organising Form">
+
+                <div class="mb-5">
+                    <h3>Register your event today!
+                        <small class="text-muted lead">Enter your event details below.</small>
+                    </h3>
+                </div>
+
+                <div class="form-group row">
+                    <label for="organiser" class="col-sm-2 col-form-label">Organiser/Company</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="organiser" placeholder="Organiser/Company" required>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="event" class="col-sm-2 col-form-label">Event Name</label>
+                    <div class="col-sm-10  event-dropdown">
+                        <input type="text" class="form-control" id="event" placeholder="Event" required />
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="location" class="col-sm-2 col-form-label">Location</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="location" placeholder="Location" required />
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="event" class="col-sm-2 col-form-label">Type of Event</label>
+                    <div class="col-sm-10">
+                        <select required class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                            <option selected value="">Event Type</option>
+                            <option value="1">Activity</option>
+                            <option value="2">Conference</option>
+                            <option value="3">Online Talk</option>
+                            <option value="4">Workshop</option>
+                            <option value="5">Webminar</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="start_date" class="col-sm-2 col-form-label">Start Date/Time</label>
+                    <td>
+                        <div class="col-sm-4 input-group date " id="start_date">
+                            <input type='date pickers' name="start_date" class="form-control" placeholder="Date/Time"
+                                required />
+                            <script>
+                                $(function () {
+                                    $('*[name=start_date]').appendDtpicker();
+                                });
+                            </script>
+                        </div>
+                    </td>
+                </div>
+
+                <div class="form-group row">
+                    <label for="end_date" class="col-sm-2 col-form-label">End Date/Time</label>
+                    <td>
+                        <div class="col-sm-4 input-group date pull-right" id="end_date">
+                            <input type='date pickers' name="end_date" class="form-control date-input"
+                                placeholder="Date/Time" required />
+                            <script>
+                                $(function () {
+                                    $('*[name=end_date]').appendDtpicker();
+                                });
+                            </script>
+                        </div>
+                    </td>
+                </div>
+
+                <div class="form-group row">
+                    <label for="email" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="email" placeholder="example@email.com" required />
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="phone" class="col-sm-2 col-form-label">Phone Number</label>
+                    <div class="col-sm-10">
+                        <input type="tel" class="form-control" id="phone" placeholder="01xxxxxxxx" required>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="description" class="col-sm-2 col-form-label">Description</label>
+                    <div class="col-sm-10">
+                        <textarea id="desscription" class="form-control" rows="8" cols="60" name="description"
+                            placeholder="Brief description in 500 words." maxlength="500"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="formFileMultiple" class="col-sm-2 col-form-label">Media Upload</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" type="file" id="formFileMultiple" multiple />
+                        <p><small>*Multiples files are allowed.</small></p>
+                    </div>
+                </div>
+
+                <div id="alert" style="display:none" class="alert alert-danger" role="alert">
+                    <p class="error" id="error_msg"></p>
+                </div>
+
+                <button type="button" class="btn btn-primary main-container" style="width:50%"
+                    onclick="Submit()">Submit</button>
+            </form>
+        </div>
+    </div>
+    <!--end of FORM-->
+
+    <!--MODAL-->
+    <div class="modal fade p-5" id="popup" role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close close-button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <p class="modal-ty fs-1">Thank you!</p>
+                    <p class="modal-word-body fs-6">Form has been submitted.</p>
+                    <p class="modal-word-body fs-6">Check your email for confirmation and updates.</p>
+                </div>
+                <div class="modal-body">
+                    <img src="images/logo.png" class="haven-logo" alt="HAVEN">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--end of MODAL-->
+
+    <br><br>
+
+    <!-- FOOTER -->
+    <footer class="footer p-5 mt-5">
+        <div class="container">
+            <div class="row m-2 pt-3">
+                <div class="col-lg-5 col-md-3">
+                    <div class="mb-5 pr-5">
+                        <h2>About Us</h2>
+                        <p class="text-justify">We provide a portal for people to join communities that want to innovate
+                            the city
+                            and a platform that raises awareness and provides solutions that meet the needs of present
+                            and future
+                            generations with respect to economic, social, environmental as well as cultural aspects.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3">
+                    <div class="mb-5 ml-md-3">
+                        <h2>Events</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="discover.html" class="py-2 d-block footer-text">Participant</a></li>
+                            <li><a href="form_organizer.html" class="py-2 d-block footer-text">Organizer</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-3">
+                    <div class=" mb-3">
+                        <h2>Have an Inquiry?</h2>
+                        <div class="block-23 mb-3">
+                            <ul class="list-unstyled">
+                                <li>
+                                    <img class="footer-img" src="images/gmail.png" alt="Gmail Icon">&nbsp;<a
+                                        class="footer-text" href="mailto:info@havenkl.com">info@havenkl.com</a>
+                                </li>
+                                <li>
+                                    <span><img class="footer-img" src="images/location.png"
+                                            alt="Location Icon">&nbsp;Kuala Lumpur</span>
+                                </li>
+                                <li>
+                                    <span><img class="footer-img" src="images/discord.png" alt="Discord Icon">&nbsp;<a
+                                            href="#" class="footer-text">havenKL</a></span>
+                                </li>
+                                <li>
+                                    <span><img class="footer-img" src="images/facebook-messenger.png"
+                                            alt="Messenger Icon">&nbsp;<a href="#"
+                                            class="footer-text">havenKL</a></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img style="display: block;margin-left: auto;margin-right: auto;width: 80%;" src="images/community.png"
+            alt="Community Vector" />
+        <p class="text-center">&copy;ImagineHack 2021 Team HAVEN</p>
+    </footer>
+    <!-- end of FOOTER -->
+
+    <script>
+        //datepicker
+        $(function () {
+            $('*[name=start_date]').appendDtpicker({
+                dateFormat: "DD/MM/YYYY, hh:mmTT",
+                closeOnSelected: true,
+                minDate: new Date(),
+            })
+        });
+
+        $(function () {
+            $('*[name=end_date]').appendDtpicker({
+                dateFormat: "DD/MM/YYYY, hh:mmTT",
+                closeOnSelected: true,
+                minDate: new Date()
+            });
+        });
+
+        //on form submit
+        function Submit(organiser, event, location, email, phone) {
+            var organiser, event, location, email, phone, description;
+            var regex_email = /^([0-9a-zA-Z]([-_\\.]*[0-9a-zA-Z]+)*)@([0-9a-zA-Z]([-_\\.]*[0-9a-zA-Z]+)*)[\\.]([a-zA-Z]{2,9})$/;
+            var regex_number = /^[0-9]+$/;
+            var show_fadeout = false;
+            var alert = $(".alert");
+            var msg = $(".error");
+            organiser = (document.getElementById("organiser") || {}).value || "";
+            event = (document.getElementById("event") || {}).value || "";
+            location = (document.getElementById("location") || {}).value || ""
+            email = (document.getElementById("email") || {}).value || "";
+            phone = (document.getElementById("phone") || {}).value || "";
+
+            if (organiser == "" && event == "" && location == "" && email == "" && phone == "" && description == "") {
+                show_fadeout = true;
+                $("#popup").modal('hide');
+                if (show_fadeout) {
+                    alert.fadeIn();
+                    msg.fadeIn();
+                    alert.css("display", "block");
+                    msg.html("Please fill up all fields.")
+                    alert.fadeOut(7000, function () { });
+                    msg.fadeOut(7000, function () { });
+                    //$(this).empty().show();
+                };
+            } else if (organiser == "" || event == "" || location == "" || email == "" || phone == "" || description == "") {
+                $("#popup").modal('hide');
+                show_fadeout = true;
+                if (show_fadeout) {
+                    alert.fadeIn();
+                    msg.fadeIn();
+                    alert.css("display", "block");
+                    msg.html("Please fill up all fields.")
+                    alert.fadeOut(7000, function () { });
+                    msg.fadeOut(7000, function () { });
+                };
+            } else if (!regex_email.test(email) && !regex_number.test(phone)) {
+                $("#popup").modal('hide');
+                show_fadeout = true;
+                if (show_fadeout) {
+                    alert.fadeIn();
+                    msg.fadeIn();
+                    alert.css("display", "block");
+                    msg.html("1. Please enter a valid email address in the format 'example@email.com'.<br> 2. The phone number entry can only contain numbers. ")
+                    alert.fadeOut(7000, function () { });
+                    msg.fadeOut(7000, function () { });
+                };
+            } else if (!regex_email.test(email)) {
+                $("#popup").modal('hide');
+                show_fadeout = true;
+                if (show_fadeout) {
+                    alert.fadeIn();
+                    msg.fadeIn();
+                    alert.css("display", "block");
+                    msg.html("Please enter a valid email address in the format 'example@email.com'.")
+                    alert.fadeOut(7000, function () { });
+                    msg.fadeOut(7000, function () { });
+                };
+            } else if (!regex_number.test(phone)) {
+                $("#popup").modal('hide');
+                show_fadeout = true;
+                if (show_fadeout) {
+                    alert.fadeIn();
+                    msg.fadeIn();
+                    alert.css("display", "block");
+                    msg.html("The phone number entry can only contain numbers.")
+                    alert.fadeOut(7000, function () { });
+                    msg.fadeOut(7000, function () { });
+                };
+            } else {
+                $("#popup").modal('show');
+                $('#form')[0].reset();
+            }
+        }
+    </script>
+
+</body>
+
+</html>

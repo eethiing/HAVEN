@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.event-title {
+    text-transform: uppercase; 
+    font-weight: bolder; 
+}
+
+.event-title:hover {
+    color: white;
+    text-shadow: 5pt 4pt blue;
+}
+
+.cut-text {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.custom-card-image {
+    max-height: 60%;
+}
+
+.custom-overlay-text {
+    font-style: italic;
+    font-weight: bold;
+}
+
+.event-card {
+    border-width: 2pt;
+    box-shadow: 6px 10px #4DB4D7;
+    height: 25rem;
+}
+
+.event-card:hover {
+    border-width: 2pt;
+    box-shadow: 6px 10px #ff99cc;
+}
+
+.list-group-item:hover {
+    font-style: italic;
+}

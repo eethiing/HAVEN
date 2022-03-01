@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Title-->
+    <title>Discover Events</title>
+    <link rel="shortcut icon" type="image/jpg" href="images/favicon.jpg" />
+
+    <!--Bootstrap-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+
+    <!-- CSS stylesheets-->
+    <link rel="stylesheet" href="css/discover.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link
+        href="import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400;600;800;900&display=swap');" />
+</head>
+
+<body style="background-image: linear-gradient(to right, #43cea2 , #185a9d);">
+
+    <!-- NAV BAR -->
+    <nav class="navbar navbar-expand-lg navbar-bg" ;>
+        <a class="navbar-brand haven" href="index.html"><img src="images/logo.png" height=50px></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon hamburger-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link word" href="index.html">Home<span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle word" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Events
+                    </a>
+                    <div class="dropdown-menu word" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="discover.html">Participant</a>
+                        <a class="dropdown-item" href="form_organizer.html">Organizer</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link word" href="index.html#our-goals">Our Goals</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link  word" href="index.html#about-us">About Us</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <!-- end of NAV BAR -->
+
+    <div id="content-holder" class="row m-5">
+        <!--FILTER OPTIONS-->
+        <div id="filters" class="col col-lg-4 mb-4">
+            <p class="display-2 event-title my-3">Discover <span>events</span></p>
+
+            <!--EVENT LIST TYPES-->
+            <ul class="list-group">
+                <li id="conference" data-select="false"
+                    class="list-group-item d-flex justify-content-between align-items-center">
+                    Conference
+                    <span class="badge bg-primary rounded-pill">0</span>
+                </li>
+                <li id="activity" data-select="false"
+                    class="list-group-item d-flex justify-content-between align-items-center">
+                    Activity
+                    <span class="badge bg-primary rounded-pill">2</span>
+                </li>
+                <li id="online_talk" data-select="false"
+                    class="list-group-item d-flex justify-content-between align-items-center">
+                    Online Talk
+                    <span class="badge bg-primary rounded-pill">1</span>
+                </li>
+                <li id="workshop" data-select="false"
+                    class="list-group-item d-flex justify-content-between align-items-center">
+                    Workshop
+                    <span class="badge bg-primary rounded-pill">1</span>
+                </li>
+                <li id="webinar" data-select="false"
+                    class="list-group-item d-flex justify-content-between align-items-center">
+                    Webinar
+                    <span class="badge bg-primary rounded-pill">1</span>
+                </li>
+            </ul>
+        </div>
+
+        <!--EVENT LIST-->
+        <div class="col col-lg-8">
+            <div class="row animate__animated animate__fadeInUp">
+
+                <!--EVENT 1: workshop-->
+                <div class="col-lg-4 col-md-6 mb-3" data-id="workshop">
+                    <div class="card border-dark event-card">
+                        <img src="images/volunteer.png" class="card-img-top custom-card-image p-2"
+                            alt="Event Picture" />
+                        <div class="card-img-overlay">
+                            <span class="card-text custom-overlay-text"
+                                style="background-color: #E7617C; font-size:x-large;">&nbsp;Workshop&nbsp;</span>
+                        </div>
+                        <div class="card-body justify-content-start">
+                            <h5 class="card-title">Be a Smart City Ambassador</h5>
+                            <h6 class="card-subtitle text-muted">10/06/2021 9am-12pm</h6>
+                            <h7 class="card-subtitle text-muted">Organizer: FRIM </h7>
+                            <p class="card-text text-truncate">Smart City Ambassadors will work with communities to
+                                raise awareness of what a Smart City is and could be.</p>
+                            <div class="d-grid col-6 mx-auto">
+                                <a href="form_SmartCity.html" class="btn btn-outline-primary">Apply now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--EVENT 2: activity-->
+                <div class="col-lg-4 col-md-6 mb-3" data-id="activity">
+                    <div class="card border-dark event-card">
+                        <img src="images/plant.png" class="card-img-top custom-card-image p-2" alt="Event Picture" />
+                        <div class="card-img-overlay">
+                            <span class="card-text custom-overlay-text"
+                                style="background-color: rgb(240, 163, 140); font-size:x-large;">&nbsp;Activity&nbsp;</span>
+                        </div>
+                        <div class="card-body justify-content-start">
+                            <h5 class="card-title">Plant a tree!</h5>
+                            <h6 class="card-subtitle text-muted">01/07/2021 10am-12pm</h6>
+                            <h7 class="card-subtitle text-muted">Organizer: Seagate & Co </h7>
+                            <p class="card-text text-truncate">Enhance the country's carbon sink as part of the city's
+                                efforts to overcome climate change.</p>
+                            <div class="d-grid col-6 mx-auto">
+                                <a href="form_plantATree.html" class="btn btn-outline-primary">Apply now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--EVENT 3: activity-->
+                <div class="col-lg-4 col-md-6 mb-3" data-id="activity">
+                    <div class="card border-dark event-card">
+                        <img src="images/recycle.png" width="300" height="170"
+                            class="card-img-top custom-card-image p-2" alt="Event Picture" />
+                        <div class="card-img-overlay">
+                            <span class="card-text custom-overlay-text"
+                                style="background-color: rgb(240, 163, 140); font-size:x-large;">&nbsp;Activity&nbsp;</span>
+                        </div>
+                        <div class="card-body justify-content-start">
+                            <h5 class="card-title">Recycle your unwanteds</h5>
+                            <h6 class="card-subtitle text-muted">20/06/2021 2pm-7pm</h6>
+                            <h7 class="card-subtitle text-muted">Organizer: ASEAN </h7>
+                            <p class="card-text text-truncate">Donate and giveaway your unwanted goods for it to be
+                                reuse or recycled.</p>
+                            <div class="d-grid col-6 mx-auto">
+                                <a href="form_Recycle.html" class="btn btn-outline-primary">Apply now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--EVENT 4:online talk-->
+                <div class="col-lg-4 col-md-6 mb-3" data-id="online_talk">
+                    <div class="card border-dark event-card">
+                        <img src="images/convo.png" class="card-img-top custom-card-image p-2" alt="Event Picture" />
+                        <div class="card-img-overlay">
+                            <span class="card-text custom-overlay-text"
+                                style="background-color: khaki; font-size:x-large;">&nbsp;Online Talk&nbsp;</span>
+                        </div>
+                        <div class="card-body justify-content-start">
+                            <h5 class="card-title">Live a sustainable lifestyle</h5>
+                            <h6 class="card-subtitle text-muted">30/05/2021 10am-12pm</h6>
+                            <h7 class="card-subtitle text-muted">Organizer: SparkBiz </h7>
+                            <p class="card-text text-truncate">Adopt actions for sustainable living that can help them
+                                reduce environmental impact.</p>
+                            <div class="d-grid col-6 mx-auto">
+                                <a href="form_SustainableLifestyle.html" class="btn btn-outline-primary">Apply now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--EVENT 5:webinar-->
+                <div class="col-lg-4 col-md-6 mb-3" data-id="webinar">
+                    <div class="card border-dark event-card">
+                        <img src="images/webinar.png" class="card-img-top custom-card-image p-2" alt="Event Picture" />
+                        <div class="card-img-overlay">
+                            <span class="card-text custom-overlay-text"
+                                style="background-color: #92D9CB; font-size:x-large;">&nbsp;Webinar&nbsp;</span>
+                        </div>
+                        <div class="card-body justify-content-start">
+                            <h5 class="card-title">Waste to Fertilizer</h5>
+                            <h6 class="card-subtitle text-muted">21/06/2021 2pm-3pm</h6>
+                            <h7 class="card-subtitle text-muted">Organizer: GreenPeace </h7>
+                            <p class="card-text text-truncate">Teach residents to compose their waste especially food
+                                waste into fertilizer.</p>
+                            <div class="d-grid col-6 mx-auto">
+                                <a href="form_Waste.html" class="btn btn-outline-primary">Apply now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        $(document).ready(function () {
+
+            $("#filters").one("click", function () {
+                if ($("#conference").attr("data-select") == "false") {
+                    $("[data-id='conference']").css("display", "none");
+                } else {
+                    $("[data-id='conference']").css("display", "block");
+                }
+
+                if ($("#activity").attr("data-select") == "false") {
+                    $("[data-id='activity']").css("display", "none");
+                } else {
+                    $("[data-id='activity']").css("display", "block");
+                }
+
+                if ($("#online_talk").attr("data-select") == "false") {
+                    $("[data-id='online_talk']").css("display", "none");
+                } else {
+                    $("[data-id='online_talk']").css("display", "block");
+                }
+
+                if ($("#workshop").attr("data-select") == "false") {
+                    $("[data-id='workshop']").css("display", "none");
+                } else {
+                    $("[data-id='workshop']").css("display", "block");
+                }
+
+                if ($("#webinar").attr("data-select") == "false") {
+                    $("[data-id='webinar']").css("display", "none");
+                } else {
+                    $("[data-id='webinar']").css("display", "block");
+                }
+            });
+
+            //Conference Type
+            $("#conference").on("click", function () {
+                if ($(this).attr("data-select") == "false") {
+                    //Initially not selected
+                    console.log("Initially not selected");
+                    $(this).attr("data-select", "true");
+                    $(this).css("background-color", "#ef476f");
+                    $(this).css("color", "white");
+
+                    $("[data-id='conference']").css("display", "block");
+                } else {
+                    //Initially selected
+                    console.log("Initially selected");
+                    $(this).attr("data-select", "false");
+                    $(this).css("background-color", "white");
+                    $(this).css("color", "black");
+
+                    $("[data-id='conference']").css("display", "none");
+                }
+                console.log($(this).attr("data-select"));
+            });
+
+            $("#conference").hover(function () {
+                if ($(this).attr("data-select") == "false") {
+                    $(this).css("background-color", "#ef476f");
+                    $(this).css("color", "white");
+                }
+            }, function () {
+                if ($(this).attr("data-select") == "false") {
+                    $(this).css("background-color", "white");
+                    $(this).css("color", "black");
+                }
+            });
+
+            //Activity Type
+            $("#activity").on("click", function () {
+                if ($(this).attr("data-select") == "false") {
+                    //Initially not selected
+                    console.log("Initially not selected");
+                    $(this).attr("data-select", "true");
+                    $(this).css("background-color", "#ffd166");
+                    $(this).css("color", "white");
+
+                    $("[data-id='activity']").css("display", "block");
+                } else {
+                    //Initially selected
+                    console.log("Initially selected");
+                    $(this).attr("data-select", "false");
+                    $(this).css("background-color", "white");
+                    $(this).css("color", "black");
+
+                    $("[data-id='activity']").css("display", "none");
+                }
+                console.log($(this).attr("data-select"));
+            });
+
+            $("#activity").hover(function () {
+                if ($(this).attr("data-select") == "false") {
+                    $(this).css("background-color", "#ffd166");
+                    $(this).css("color", "white");
+                }
+            }, function () {
+                if ($(this).attr("data-select") == "false") {
+                    $(this).css("background-color", "white");
+                    $(this).css("color", "black");
+                }
+            });
+
+            //Online Talk
+            $("#online_talk").on("click", function () {
+                if ($(this).attr("data-select") == "false") {
+                    //Initially not selected
+                    console.log("Initially not selected");
+                    $(this).attr("data-select", "true");
+                    $(this).css("background-color", "#06d6a0");
+                    $(this).css("color", "white");
+
+                    $("[data-id='online_talk']").css("display", "block");
+                } else {
+                    //Initially selected
+                    console.log("Initially selected");
+                    $(this).attr("data-select", "false");
+                    $(this).css("background-color", "white");
+                    $(this).css("color", "black");
+
+                    $("[data-id='online_talk']").css("display", "none");
+                }
+                console.log($(this).attr("data-select"));
+            });
+
+            $("#online_talk").hover(function () {
+                if ($(this).attr("data-select") == "false") {
+                    $(this).css("background-color", "#06d6a0");
+                    $(this).css("color", "white");
+                }
+            }, function () {
+                if ($(this).attr("data-select") == "false") {
+                    $(this).css("background-color", "white");
+                    $(this).css("color", "black");
+                }
+            });
+
+            //Workshop
+            $("#workshop").on("click", function () {
+                if ($(this).attr("data-select") == "false") {
+                    //Initially not selected
+                    console.log("Initially not selected");
+                    $(this).attr("data-select", "true");
+                    $(this).css("background-color", "#118ab2");
+                    $(this).css("color", "white");
+
+                    $("[data-id='workshop']").css("display", "block");
+                } else {
+                    //Initially selected
+                    console.log("Initially selected");
+                    $(this).attr("data-select", "false");
+                    $(this).css("background-color", "white");
+                    $(this).css("color", "black");
+
+                    $("[data-id='workshop']").css("display", "none");
+                }
+                console.log($(this).attr("data-select"));
+            });
+
+            $("#workshop").hover(function () {
+                if ($(this).attr("data-select") == "false") {
+                    $(this).css("background-color", "#118ab2");
+                    $(this).css("color", "white");
+                }
+            }, function () {
+                if ($(this).attr("data-select") == "false") {
+                    $(this).css("background-color", "white");
+                    $(this).css("color", "black");
+                }
+            });
+
+            //Webinar
+            $("#webinar").on("click", function () {
+                if ($(this).attr("data-select") == "false") {
+                    //Initially not selected
+                    console.log("Initially not selected");
+                    $(this).attr("data-select", "true");
+                    $(this).css("background-color", "#073b4c");
+                    $(this).css("color", "white");
+
+                    $("[data-id='webinar']").css("display", "block");
+                } else {
+                    //Initially selected
+                    console.log("Initially selected");
+                    $(this).attr("data-select", "false");
+                    $(this).css("background-color", "white");
+                    $(this).css("color", "black");
+
+                    $("[data-id='webinar']").css("display", "none");
+                }
+                console.log($(this).attr("data-select"));
+            });
+
+            $("#webinar").hover(function () {
+                if ($(this).attr("data-select") == "false") {
+                    $(this).css("background-color", "#073b4c");
+                    $(this).css("color", "white");
+                }
+            }, function () {
+                if ($(this).attr("data-select") == "false") {
+                    $(this).css("background-color", "white");
+                    $(this).css("color", "black");
+                }
+            });
+
+        });
+
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

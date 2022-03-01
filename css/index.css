@@ -1,0 +1,241 @@
+body {
+    /*background-image: linear-gradient(#0C5985, #43ADAD);*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400;600;800;900&display=swap');
+
+.title {
+    text-transform: uppercase; 
+    font-weight: bolder;
+    -webkit-text-stroke: 1pt black;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+}
+
+#aboutus-title {
+    text-shadow: 4pt 4pt #06d6a0;
+    font-family: 'Raleway', sans-serif;
+}
+
+#goal-title {
+    text-shadow: 4pt 4pt #a59698;
+    font-family: 'Raleway', sans-serif;
+}
+
+.caption {
+    color: white;
+    text-shadow: 1pt 1pt black;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+.main {
+    font-weight: bold;
+    color: white;
+    font-size: 200%;
+    font-family: 'Abril Fatface', cursive;
+}
+
+.goal-div {
+    width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5rem;
+	margin-bottom: 5rem; 
+}
+
+/*horizontal accordion*/
+
+.accordion {
+    max-width: 90%;
+    /*background: rgba(0, 0, 0, 0.411);*/
+    background-image: linear-gradient(to top, #4dd2ff 30%,#0000);
+    height: 300px;
+    margin: 20px auto;
+    display: flex;
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.47);
+    flex-direction: row;
+    cursor: pointer;
+    margin-bottom: 100px;
+}
+.box {
+    position: relative;
+    height: 100%;
+    flex: 1;
+    background-position: left;
+    background-size: cover;
+    transition: .7s;
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.47);
+}
+.box:hover{
+    flex: 7;
+    height: 400px;
+}
+.text {
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    padding: 10px;
+    color: black;
+    font-family: 'Raleway', sans-serif;
+}
+.box:hover .text{
+    opacity:1;
+}
+@media screen and (max-width: 700px){
+    .accordion {
+        flex-direction: column;
+        height: 700px;
+        box-shadow: none;
+    }
+    .box {
+        box-shadow: none;
+    }
+    .box:hover {
+        flex: 7;
+    }
+}
+
+/*vertical accordion*/
+
+*, *:after, *:before {
+	box-sizing: border-box;
+}
+
+:root {
+	font-size: 16px;
+}
+
+.whole {
+	font-family: 'Raleway', sans-serif;
+	line-height: 1.5;
+	min-height: 100vh;
+	font-size: 1.25rem;
+}
+
+*:focus {
+	outline: none;
+}
+
+
+details div {
+	border-left: 2px solid #000;
+	border-right: 2px solid #000;
+	border-bottom: 2px solid #000;
+	padding: 1.5em;
+    text-align: justify;
+    width: 100%;
+}
+
+details div > * + * {
+	margin-top: 1.5em;
+}
+
+details + details {
+	margin-top: .5rem;
+}
+
+summary {
+	list-style: none;
+}
+
+summary::-webkit-details-marker {
+	display: none;
+}
+
+summary {
+	border: 2px solid #000;
+	padding: .75em 1em;
+	cursor: pointer;
+	position: relative;
+	padding-left: calc(1.75rem + .75rem + .75rem);
+}
+
+summary:before {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: .75rem;
+	content: "↓";
+	width: 1.75rem;
+	height: 1.75rem;
+	background-color: #000;
+	color: #FFF;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	flex-shrink: 0;
+}
+
+details[open] summary {
+	background-color: #eee;
+}
+
+details[open] summary:before {
+	content: "↑";
+}
+
+summary:hover {
+	background-color: #eee;
+}
+
+.a {
+	color: inherit;
+	font-weight: 600;
+	text-decoration: none;
+	box-shadow: 0 1px 0 0;
+}
+
+.goals-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    
+}
+
+a:hover {
+	box-shadow: 0 3px 0 0;
+}
+
+code {
+	font-family: monospace;
+	font-weight: 600;
+}
+
+.goals{
+    margin-left: 25% !important;
+    margin-top: 10%;
+}
+
+.goals-text{
+    margin-top: 5%;
+    margin-right: 15%;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: normal;
+}
+
+.footer {
+    background-color: #F3C6BD
+}
+
+.footer-img {
+    height: 10pt;
+    width: auto;
+}
+
+.footer-text {
+    color: black;
+    font-family: 'Raleway', sans-serif;
+}
+
+.footer-text:hover {
+    color: black;
+    font-family: 'Raleway', sans-serif;
+}

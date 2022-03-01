@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Be a Smart City Ambassador!</title>
+
+    <link rel="shortcut icon" type="image/jpg" href="images/favicon.jpg" />
+
+    <!--Dependencies-->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="css/stylesheet.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link
+        href="import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400;600;800;900&display=swap');" />
+</head>
+
+<body style="background-image: url('images/form.jpg')">
+    <!-- NAV BAR -->
+    <nav class="navbar navbar-expand-lg navbar-bg" ;>
+        <a class="navbar-brand haven" href="index.html"><img src="images/logo.png" height=50px></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon hamburger-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link word" href="index.html">Home<span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle word" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Events
+                    </a>
+                    <div class="dropdown-menu word" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="discover.html">Participant</a>
+                        <a class="dropdown-item" href="form_organizer.html">Organizer</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link word" href="index.html#our-goals">Our Goals</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link  word" href="index.html#about-us">About Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- end of NAV BAR -->
+
+    <!--FORM-->
+    <div class="main-container my-5" style="width:80%;">
+        <div class="form-container p-5">
+            <div class="details-container">
+                <h1 style="color: white;">Be a Smart City Ambassador! <small
+                        style="font-style: italic;">Workshop</small></h1>
+                <img class="main-container" style="width: 50%;" src="images/volunteer.png" alt="Plant a tree media">
+                <table>
+                    <tr>
+                        <td class="detail">Organized by</td>
+                        <td>&nbsp;</td>
+                        <td>FRIM</td>
+                    </tr>
+                    <tr>
+                        <td class="detail">Date / Time</td>
+                        <td>&nbsp;</td>
+                        <td>10/06/2021, 9am-12pm</td>
+                    </tr>
+                    <tr>
+                        <td class="detail">Location</td>
+                        <td>&nbsp;</td>
+                        <td>Megamall, Taman Setia</td>
+                    </tr>
+                </table>
+                <p>An opportunity for people to adopt actions for sustainable living that can help them reduce their
+                    carbon footprint or environmental impact by altering their lifestyle.</p>
+            </div>
+            <div class="p-form-container">
+                <form id="form" class="form" action="" method="post" name="Event Organising Form">
+
+                    <div class="mt-5 mb-3">
+                        <h3>Apply to join today!</h3>
+                    </div>
+
+                    <div id="alert" style="display:none" class="alert alert-danger" role="alert">
+                        <p class="error" id="error_msg"></p>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="organiser" class="col-sm-2 col-form-label">Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="name" placeholder="Name" />
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="email" class="col-sm-2 col-form-label">Email</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="email" placeholder="example@email.com" />
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="phone" class="col-sm-2 col-form-label">Phone Number</label>
+                        <div class="col-sm-10">
+                            <input type="tel" class="form-control" id="phone" placeholder="601xxxxxxxx" />
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn btn-primary main-container" style="width:50%"
+                        onclick="Submit()">Submit</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="popup" role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close close-button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h3 class="modal-ty">Thank you!</h3>
+                    <h4 class="modal-word-body">Form has been submitted.</h4>
+                    <h4 class="modal-word-body">Check your email for confirmation and updates.</h4>
+                </div>
+                <div class="modal-body">
+                    <img src="images/logo.png" class="haven-logo" alt="HAVEN">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end of Modal -->
+
+    <!-- FOOTER -->
+    <footer class="footer p-5 mt-5">
+        <div class="container">
+            <div class="row m-2 pt-3">
+                <div class="col-lg-5 col-md-3">
+                    <div class="mb-5 pr-5">
+                        <h2>About Us</h2>
+                        <p class="text-justify">We provide a portal for people to join communities that want to innovate
+                            the city
+                            and a platform that raises awareness and provides solutions that meet the needs of present
+                            and future
+                            generations with respect to economic, social, environmental as well as cultural aspects.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3">
+                    <div class="mb-5 ml-md-3">
+                        <h2>Events</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="discover.html" class="py-2 d-block footer-text">Participant</a></li>
+                            <li><a href="form_organizer.html" class="py-2 d-block footer-text">Organizer</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-3">
+                    <div class=" mb-3">
+                        <h2>Have an Inquiry?</h2>
+                        <div class="block-23 mb-3">
+                            <ul class="list-unstyled">
+                                <li>
+                                    <img class="footer-img" src="images/gmail.png" alt="Gmail Icon">&nbsp;<a
+                                        class="footer-text" href="mailto:info@havenkl.com">info@havenkl.com</a>
+                                </li>
+                                <li>
+                                    <span><img class="footer-img" src="images/location.png"
+                                            alt="Location Icon">&nbsp;Kuala Lumpur</span>
+                                </li>
+                                <li>
+                                    <span><img class="footer-img" src="images/discord.png" alt="Discord Icon">&nbsp;<a
+                                            href="#" class="footer-text">havenKL</a></span>
+                                </li>
+                                <li>
+                                    <span><img class="footer-img" src="images/facebook-messenger.png"
+                                            alt="Messenger Icon">&nbsp;<a href="#"
+                                            class="footer-text">havenKL</a></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img style="display: block;margin-left: auto;margin-right: auto;width: 80%;" src="images/community.png"
+            alt="Community Vector" />
+        <p class="text-center">&copy;ImagineHack 2021 Team HAVEN</p>
+    </footer>
+    <!-- end of FOOTER -->
+
+    <script>
+        //on submission msg
+        function Submit(name, email, phone) {
+            var name, email, phone
+            var regex_email = /^([0-9a-zA-Z]([-_\\.]*[0-9a-zA-Z]+)*)@([0-9a-zA-Z]([-_\\.]*[0-9a-zA-Z]+)*)[\\.]([a-zA-Z]{2,9})$/;
+            var regex_number = /^[0-9]+$/;
+            var show_fadeout = false;
+            var alert = $(".alert")
+            var msg = $(".error")
+            name = (document.getElementById("name") || {}).value || "";
+            email = (document.getElementById("email") || {}).value || "";
+            phone = (document.getElementById("phone") || {}).value || "";
+
+            if (name == "" && email == "" && phone == "") {
+                console.log("Null")
+                show_fadeout = true;
+                $("#popup").modal('hide');
+                if (show_fadeout) {
+                    alert.fadeIn();
+                    msg.fadeIn();
+                    alert.css("display", "block");
+                    msg.html("Please fill up all fields.")
+                    alert.fadeOut(5000, function () { });
+                    msg.fadeOut(5000, function () { });
+                    //$(this).empty().show();
+                };
+            } else if (name == "" || email == "" || phone == "") {
+                $("#popup").modal('hide');
+                show_fadeout = true;
+                if (show_fadeout) {
+                    alert.fadeIn();
+                    msg.fadeIn();
+                    alert.css("display", "block");
+                    msg.html("1. Please enter a valid email address in the format 'example@email.com'.<br> 2. The phone number entry can only contain numbers. ")
+                    alert.fadeOut(7000, function () { });
+                    msg.fadeOut(7000, function () { });
+                };
+            } else if (!regex_email.test(email) && !regex_number.test(phone)) {
+                $("#popup").modal('hide');
+                show_fadeout = true;
+                if (show_fadeout) {
+                    alert.fadeIn();
+                    msg.fadeIn();
+                    alert.css("display", "block");
+                    msg.html("1. Please enter a valid email address in the format 'example@email.com'.<br> 2. The phone number entry can only contain numbers. ")
+                    alert.fadeOut(7000, function () { });
+                    msg.fadeOut(7000, function () { });
+                };
+            } else if (!regex_email.test(email)) {
+                $("#popup").modal('hide');
+                show_fadeout = true;
+                if (show_fadeout) {
+                    alert.fadeIn();
+                    msg.fadeIn();
+                    alert.css("display", "block");
+                    msg.html("Please enter a valid email address in the format 'example@email.com'.")
+                    alert.fadeOut(7000, function () { });
+                    msg.fadeOut(7000, function () { });
+                };
+            } else if (!regex_number.test(phone)) {
+                $("#popup").modal('hide');
+                show_fadeout = true;
+                if (show_fadeout) {
+                    alert.fadeIn();
+                    msg.fadeIn();
+                    alert.css("display", "block");
+                    msg.html("The phone number entry can only contain numbers.")
+                    alert.fadeOut(7000, function () { });
+                    msg.fadeOut(7000, function () { });
+                };
+            } else {
+                $("#popup").modal('show');
+                $('#form')[0].reset();
+            }
+        }
+    </script>
+
+</body>
+
+</html>
